@@ -1,0 +1,105 @@
+.slider {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+
+	&__content {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		display: flex;
+		height: inherit;
+		justify-content: stretch;
+	}
+
+	&__item {
+		flex-grow: 1;
+		background-size: cover;
+		background-position: center;
+		color: white;
+		font-size: 150px;
+		font-family: sans-serif;
+
+		&_1 {
+			background-image: url(../img/1.jpg);
+		}
+
+		&_2 {
+			background-image: url(../img/2.jpg);
+		}
+
+		&_3 {
+			background-image: url(../img/3.jpg);
+		}
+
+		&_4 {
+			background-image: url(../img/4.jpg);
+		}
+
+		&_5 {
+			background-image: url(../img/5.jpg);
+		}
+
+		&_6 {
+			background-image: url(../img/6.jpg);
+		}
+
+		&_7 {
+			background-image: url(../img/7.jpg);
+		}
+
+		&_8 {
+			background-image: url(../img/8.jpg);
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		cursor: pointer;
+		font-family: sans-serif;
+		outline: none;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.3);
+		padding: 10px;
+		color: white;
+		font-size: 30px;
+
+		&_back {
+			left: 0;
+		}
+
+		&_forward {
+			right: 0;
+		}
+	}
+
+	&__dots {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.dots {
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-color: rgba(255, 255, 255, 0.5);
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&_active {
+			background-color: white;
+		}
+	}
+}
